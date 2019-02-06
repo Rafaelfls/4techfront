@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Cabecalho from './components/navigation/Header/Header';
-import JobsList from './components/JobsList/JobsList';
-import JobForm from './components/JobsList/JobForm/JobForm';
+import JobsManagement from './components/JobsManagement/JobsManagement';
 
 class App extends Component {
   render() {
@@ -11,8 +10,8 @@ class App extends Component {
       <div className="App">
         <Cabecalho/>
         <div className="container pt-3">
-          <JobForm/>
-          <JobsList/>
+          
+            <JobsManagement/>
         </div>
       </div>
     );

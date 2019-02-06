@@ -23,7 +23,7 @@ const jobCard = (props) => {
     return(
       <div className="col-sm-12 col-md-6 col-lg-4 mb-3">
       <div className="card">
-        <img className="card-img-top" src={img} alt="Card image cap" />
+        <img className="card-img-top" src={img} alt="Card cap" />
         <div className="card-body">
           <h5 className="card-title">{props.name}</h5>
           <div>
@@ -34,12 +34,13 @@ const jobCard = (props) => {
             <p>R$ {props.sallary}</p>
 
           </div>
-          <a href="#" className="btn btn-warning">
+          <button onClick = {props.editHandler} className="btn btn-warning">
             <i className="far fa-edit"></i>
-          </a>
-          <a href="#" className="btn btn-danger ml-1">
+          </button>
+
+          <button onClick = {props.removeHandler} className="btn btn-danger ml-1">
             <i className="far fa-trash-alt"></i>
-          </a>
+          </button>
         </div>
       </div>
       </div>
