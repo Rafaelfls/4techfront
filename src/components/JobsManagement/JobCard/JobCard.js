@@ -2,6 +2,7 @@ import React from 'react';
 import developerImg from '../../../assets/developer.png'
 import testerImg from '../../../assets/tester.png'
 import designerImg from '../../../assets/designer.png'
+import defaultImg from '../../../assets/default.png'
 
 
 const jobCard = (props) => {
@@ -10,13 +11,16 @@ const jobCard = (props) => {
 
   switch (props.area) {
     case 'Dev':
-        img = developerImg;
+      img = developerImg;
       break;
     case 'Test':
       img = testerImg;
       break;
     case 'Design':
-        img = designerImg;
+      img = designerImg;
+      break;
+    default:
+      img = defaultImg;
       break;
   }
 
@@ -31,10 +35,10 @@ const jobCard = (props) => {
             <p>{props.description}</p>
 
             <b>Salário base:</b>
-            <p>R$ {props.sallary}</p>
+            <p>R$ {props.salary}</p>
 
           </div>
-          <button onClick = {props.editHandler} className="btn btn-warning">
+          <button onClick={ props.editHandler } data-toggle="collapse" data-target={ '#' + props.panelId } className="btn btn-warning">
             <i className="far fa-edit"></i>
           </button>
 
