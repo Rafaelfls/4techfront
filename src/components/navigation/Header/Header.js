@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../../../assets/logo-vagas.png';
 import {Link} from 'react-router-dom';
 
-const header = () => {
+const header = (props) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light  bg-dark">
       <Link className="navbar-brand" to='/dashboard'>
@@ -18,6 +18,10 @@ const header = () => {
           <Link className="nav-item nav-link text-white" to='/sobre'>Sobre</Link>
         </div>
       </div>
+      <a className ="nav-item nav-link text-white">{props.userName}</a>
+      <a className ="nav-item nav-link text-white" onClick={()=>props.logout()}>
+        <i className ='fas fa-sign-out-alt'></i>
+      </a>
     </nav>
   )
 }
